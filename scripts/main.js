@@ -22,13 +22,13 @@ const playRound = (playerSelection, computerSelection) => {
     return "Draw!";
   }
 
-  const strongAgainstRules = {
+  const loserOf = {
     rock: "scissors",
     paper: "rock",
     scissors: "paper",
   };
 
-  if (strongAgainstRules[playerSelection] === computerSelection) {
+  if (loserOf[playerSelection] === computerSelection) {
     return `You win! ${playerSelection} beats ${computerSelection}`;
   } else { 
     return `You lose! ${computerSelection} beats ${playerSelection}`;

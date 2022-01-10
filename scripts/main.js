@@ -17,6 +17,7 @@ const computerPlay = () => {
 
 const playRound = (playerSelection, computerSelection) => {
   // return a string that declares the winner of the round
+  console.log(`You pick ${playerSelection} and the computer pick ${computerSelection}`)
   if (playerSelection === computerSelection) {
     return "Draw!";
   }
@@ -27,7 +28,9 @@ const playRound = (playerSelection, computerSelection) => {
     scissors: "paper",
   };
 
-  if (strongAgainstRules[playerSelection][computerSelection]) {
-    return "You win!"
-  } else {return "You lose!"}
+  if (strongAgainstRules[playerSelection] === computerSelection) {
+    return `You win! ${playerSelection} beats ${computerSelection}`;
+  } else { 
+    return `You lose! ${computerSelection} beats ${playerSelection}`;
+  }
 };

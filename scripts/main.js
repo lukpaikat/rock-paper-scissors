@@ -34,3 +34,9 @@ const playRound = (playerSelection, computerSelection) => {
     return `You lose! ${computerSelection} beats ${playerSelection}`;
   }
 };
+
+const game = () => {
+  // play 5 round game
+
+  
+};

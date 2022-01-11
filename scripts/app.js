@@ -15,42 +15,49 @@ const computerPlay = () => {
   return choices[randomNumber];
 };
 
+const whoIsWeakAgainst = (playerSelection) => {
+  // return who is weak against playerSelection
+  const loserData = {
+    rock: "scissors",
+    paper: "rock",
+    scissors: "paper",
+  };
+  return loserData[playerSelection];
+};
+
 const playRound = (playerSelection, computerSelection) => {
   // return a string that declares the winner of the round
   console.log(`You pick ${playerSelection} and the computer pick ${computerSelection}`)
   if (playerSelection === computerSelection) {
     return "Draw!";
   }
-
-  const loserOf = {
-    rock: "scissors",
-    paper: "rock",
-    scissors: "paper",
-  };
-
-  if (loserOf[playerSelection] === computerSelection) {
+  if (whoIsWeakAgainst(playerSelection) === computerSelection) {
     return `You win! ${playerSelection} beats ${computerSelection}`;
   } else {
     return `You lose! ${computerSelection} beats ${playerSelection}`;
   }
 };
 
+const normalizedPromptValue = (gameRounds) => {
+  return window
+  .prompt(`Enter your choice: rock, paper, or scissors (Game round: ${gameRounds})`)
+  .trim()
+  .toLowerCase();
+}
+
 const getUserInput = (gameRounds) => {
-  const userInput = window
-    .prompt(`Enter your choice: rock, paper, or scissors (Game round: ${gameRounds})`)
-    .trim()
-    .toLowerCase();
   const inputRestriction = {
     rock: "rock",
     paper: "paper",
     scissors: "scissors",
   }
-  if (userInput === inputRestriction[userInput]) {
-    return userInput;
-  } else {
+  let userInput = normalizedPromptValue(gameRounds);
+
+  while(userInput !== inputRestriction[userInput]) {
     window.alert("wrong input, please enter rock, paper, or scissors");
-    getUserInput(gameRounds);
+    userInput = normalizedPromptValue(gameRounds);
   }
+  return userInput;
 };
 
 const game = () => {
@@ -62,6 +69,7 @@ const game = () => {
   let computerScore = 0;
   while (gameRounds <= 5) {
     const playerSelection = getUserInput(gameRounds);
+    console.log(playerSelection);
     const computerSelection = computerPlay();
     const roundResult = playRound(playerSelection, computerSelection);
     console.log(roundResult);

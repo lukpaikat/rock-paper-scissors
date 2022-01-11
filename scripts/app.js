@@ -30,22 +30,26 @@ const playRound = (playerSelection, computerSelection) => {
 
   if (loserOf[playerSelection] === computerSelection) {
     return `You win! ${playerSelection} beats ${computerSelection}`;
-  } else { 
+  } else {
     return `You lose! ${computerSelection} beats ${playerSelection}`;
   }
 };
 
-const getUserInput = () => {
+const getUserInput = (gameRounds) => {
   const userInput = window
-    .prompt("Enter your choice: rock, paper, or scissors")
+    .prompt(`Enter your choice: rock, paper, or scissors (Game round: ${gameRounds})`)
     .trim()
     .toLowerCase();
-  const inputRestriction = "rock" || "paper" || "scissors";
-  if (userInput === inputRestriction ) {
+  const inputRestriction = {
+    rock: "rock",
+    paper: "paper",
+    scissors: "scissors",
+  }
+  if (userInput === inputRestriction[userInput]) {
     return userInput;
   } else {
     window.alert("wrong input, please enter rock, paper, or scissors");
-    getUserInput();
+    getUserInput(gameRounds);
   }
 };
 
@@ -54,10 +58,25 @@ const game = () => {
   // keeps score
   // reports a winner or a loser at the end
   let gameRounds = 1;
+  let playerScore = 0;
+  let computerScore = 0;
   while (gameRounds <= 5) {
-      const playerSelection = getUserInput();
-      const computerSelection = computerPlay();
+    const playerSelection = getUserInput(gameRounds);
+    const computerSelection = computerPlay();
+    const roundResult = playRound(playerSelection, computerSelection);
+    console.log(roundResult);
+    if (roundResult.indexOf("win!") >= 0) {
+      playerScore++;
+      gameRounds++;
+     }
+      else { 
+        computerScore++ 
+        gameRounds++;
+      }
   }
+  const finalScore = `${playerScore}-${computerScore}`
+  if (playerScore > computerScore) { console.log(`You win the Game: ${finalScore}`) }
+    else { console.log(`You lose the game: ${finalScore}`) }
 };
 
-getUserInput()
+game();

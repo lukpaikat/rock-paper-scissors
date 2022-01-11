@@ -35,8 +35,19 @@ const playRound = (playerSelection, computerSelection) => {
   }
 };
 
+const getUserInput = () => {
+  const userInput = window.prompt("Enter your choice: rock, paper, or scissors").toLowerCase();
+  console.log(userInput)
+};
+
 const game = () => {
   // play 5 round game
-
-  
+  // keeps score
+  // reports a winner or a loser at the end
+  let gameRounds = 1;
+  while (gameRounds <= 5) {
+    
+  }
 };
+
+getUserInput();

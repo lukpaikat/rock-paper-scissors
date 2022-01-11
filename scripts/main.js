@@ -36,8 +36,17 @@ const playRound = (playerSelection, computerSelection) => {
 };
 
 const getUserInput = () => {
-  const userInput = window.prompt("Enter your choice: rock, paper, or scissors").toLowerCase();
-  console.log(userInput)
+  const userInput = window
+    .prompt("Enter your choice: rock, paper, or scissors")
+    .trim()
+    .toLowerCase();
+  const inputRestriction = "rock" || "paper" || "scissors";
+  if (userInput === inputRestriction ) {
+    return userInput;
+  } else {
+    window.alert("wrong input, please enter rock, paper, or scissors");
+    getUserInput();
+  }
 };
 
 const game = () => {
@@ -46,8 +55,9 @@ const game = () => {
   // reports a winner or a loser at the end
   let gameRounds = 1;
   while (gameRounds <= 5) {
-    
+      const playerSelection = getUserInput();
+      const computerSelection = computerPlay();
   }
 };
 
-getUserInput();
+getUserInput()

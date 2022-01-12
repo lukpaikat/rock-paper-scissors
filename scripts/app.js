@@ -39,10 +39,11 @@ const playRound = (playerSelection, computerSelection) => {
 };
 
 const normalizedPromptValue = (gameRounds) => {
-  return window
+  const promptValue = window
   .prompt(`Enter your choice: rock, paper, or scissors (Game round: ${gameRounds})`)
   .trim()
   .toLowerCase();
+  return promptValue;
 }
 
 const getUserInput = (gameRounds) => {
@@ -51,11 +52,15 @@ const getUserInput = (gameRounds) => {
     paper: "paper",
     scissors: "scissors",
   }
-  let userInput = normalizedPromptValue(gameRounds);
+  let userInput = null;
+  let retries = 0;
 
   while(userInput !== inputRestriction[userInput]) {
-    window.alert("wrong input, please enter rock, paper, or scissors");
+    if (retries) {
+      window.alert("wrong input, please enter rock, paper, or scissors");
+    }
     userInput = normalizedPromptValue(gameRounds);
+    retries++
   }
   return userInput;
 };
@@ -69,7 +74,6 @@ const game = () => {
   let computerScore = 0;
   while (gameRounds <= 5) {
     const playerSelection = getUserInput(gameRounds);
-    console.log(playerSelection);
     const computerSelection = computerPlay();
     const roundResult = playRound(playerSelection, computerSelection);
     console.log(roundResult);

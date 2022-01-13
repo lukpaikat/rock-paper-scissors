@@ -1,0 +1,22 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "2.0.0",
+  "description": "Play Rock-paper-Scissors in a browser (with UI!)",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukpaikat/rock-paper-scissors.git"
+  },
+  "keywords": [
+    "RPS"
+  ],
+  "author": "lukpaikat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukpaikat/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/lukpaikat/rock-paper-scissors#readme"
+}

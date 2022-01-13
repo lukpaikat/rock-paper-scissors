@@ -1,15 +1,4 @@
-const randomGenerator = require('./modules/randomGenerator.js')
-
-const computerPlay = () => {
-  // randomly return rock, paper, or scissors
-  const choices = {
-    1: "rock",
-    2: "paper",
-    3: "scissors"
-  }
-  const randomNumber = randomGenerator(1, 3);
-  return choices[randomNumber];
-};
+const computerPlay = require('./utils/computerPlay.js')
 
 const whoIsWeakAgainst = (playerSelection) => {
   // return who is weak against playerSelection

@@ -1,4 +1,4 @@
-const randomGenerator = require('../scripts/modules/randomGenerator.js');
+const randomGenerator = require('../scripts/utils/randomGenerator.js');
 
 describe('randomGenerator should generate random number within determined range', () => {
   for (let i = 1; i <= 10; i++) {
@@ -7,7 +7,7 @@ describe('randomGenerator should generate random number within determined range'
       const rangeEnd = 5;
       const randomNumber = randomGenerator(rangeStart, rangeEnd);
       expect(randomNumber).toBeGreaterThanOrEqual(rangeStart);
-      expect(randomNumber).toBeLesserThanOrEqual(rangeEnd);
+      expect(randomNumber).toBeLessThanOrEqual(rangeEnd);
     })
   }
 })

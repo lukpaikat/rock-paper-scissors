@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/lukpaikat/rock-paper-scissors/issues"
   },
-  "homepage": "https://github.com/lukpaikat/rock-paper-scissors#readme"
+  "homepage": "https://github.com/lukpaikat/rock-paper-scissors#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
 }

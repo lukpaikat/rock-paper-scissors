@@ -1,8 +1,4 @@
-console.log("Hello World");
-
-const randomGenerator = (min, max) => {
-  return Math.round(Math.random() * (max - min) + min);
-};
+const randomGenerator = require('./modules/randomGenerator.js')
 
 const computerPlay = () => {
   // randomly return rock, paper, or scissors

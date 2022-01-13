@@ -53,7 +53,6 @@ const getUserInput = (gameRounds) => {
 // what the code should do
 // TODO: click btn to play the game
 // TODO: keeps score
-// 
 
 const initButton = (btnId, btnStrInput) => {
   // give event listeners to the game buttons

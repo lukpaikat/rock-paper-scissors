@@ -65,30 +65,16 @@ const getUserInput = (gameRounds) => {
   return userInput;
 };
 
-const game = () => {
-  // play 5 round game
-  // keeps score
-  // reports a winner or a loser at the end
-  let gameRounds = 1;
-  let playerScore = 0;
-  let computerScore = 0;
-  while (gameRounds <= 5) {
-    const playerSelection = getUserInput(gameRounds);
-    const computerSelection = computerPlay();
-    const roundResult = playRound(playerSelection, computerSelection);
-    console.log(roundResult);
-    if (roundResult.indexOf("win!") >= 0) {
-      playerScore++;
-      gameRounds++;
-     }
-      else { 
-        computerScore++ 
-        gameRounds++;
-      }
-  }
-  const finalScore = `${playerScore}-${computerScore}`
-  if (playerScore > computerScore) { console.log(`You win the Game: ${finalScore}`) }
-    else { console.log(`You lose the game: ${finalScore}`) }
-};
+// what the code should do
+// TODO: click btn to play the game
+// TODO: keeps score
+// 
 
-game();
+const initButton = (btnId, btnStrInput) => {
+  // give event listeners to the game buttons
+  const btnElement = document.getElementById(btnId);
+  const roundResultElement = document.getElementById('round-result');
+  btnElement.addEventListener('click', () => {
+    roundResultElement.textContent = playRound(btnStrInput, computerPlay());
+  });
+}

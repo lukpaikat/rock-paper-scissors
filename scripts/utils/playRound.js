@@ -6,6 +6,7 @@ const playRound = (playerSelection, computerSelection) => {
   if (playerSelection === computerSelection) {
     return "Draw!";
   }
+  // TODO: update game score
   if (whoIsWeakAgainst(playerSelection) === computerSelection) {
     return `You win! ${playerSelection} beats ${computerSelection}`;
   } else {

@@ -12,3 +12,5 @@ const initButton = (btnId, btnStrInput) => {
     roundResultElement.textContent = playRound(btnStrInput, computerPlay());
   });
 }
+
+module.exports = initButton;

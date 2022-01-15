@@ -2,7 +2,7 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 
 describe('Initial player and computer score', () => {
-  test('should seen player and computer score as 0', () => {
+  test('the browser should show the player and computer score as 0', () => {
     const { document } = (new JSDOM('...')).window;
     document.body.innerHTML = /*html*/ `
         <p id="player-score">0</p>
@@ -14,3 +14,5 @@ describe('Initial player and computer score', () => {
     expect(computerScore.textContent).toEqual('0');
   });
 });
+
+describe('')

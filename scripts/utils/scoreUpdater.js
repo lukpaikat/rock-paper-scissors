@@ -1,4 +1,4 @@
-// TODO: keeps score
+// TODO: update score to game data
 const scoreUpdater = () => {
   return 'nothing';
 };

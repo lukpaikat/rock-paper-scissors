@@ -15,4 +15,4 @@ describe('Initial player and computer score', () => {
   });
 });
 
-describe('')
+describe('Should update score in runningScore')

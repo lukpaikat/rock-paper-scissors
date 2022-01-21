@@ -1,13 +1,13 @@
-const initButton = require('./utils/btn-initiator');
+// const initButton = require('./utils/btn-initiator');
 
 // execute initial functions here
 // this code should make browser display welcome page
 document.addEventListener('DOMContentLoaded', () => {
-  const rockBtn = document.getElementById('rock-btn');
-  const paperBtn = document.getElementById('paper-btn');
-  const scissorsBtn = document.getElementById('scissors-btn');
+  const main = document.querySelector('main');
+  main.innerHTML = /* html */ `
+  <h1 class="game-title">Rock Paper Scissors</h1>
+  <p class="game-sub-title">The game</p>
 
-  initButton(rockBtn, 'rock');
-  initButton(paperBtn, 'paper');
-  initButton(scissorsBtn, 'scissors');
+  <button id="start-button">Start game</button>
+`
 });

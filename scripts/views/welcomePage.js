@@ -1,7 +1,7 @@
 // const initButton = require('./utils/btn-initiator');
 
 // this code should make browser display welcome page
-const welcomeView = (mainElm) => {
+const welcomePage = (mainElm) => {
   const main = mainElm;
   main.innerHTML = /* html */ `
     <h1 class="game-title">Rock Paper Scissors</h1>
@@ -10,4 +10,4 @@ const welcomeView = (mainElm) => {
   `;
 };
 
-module.exports = welcomeView;
+module.exports = welcomePage;

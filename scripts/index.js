@@ -1,7 +1,7 @@
 // execute initial functions here
-const welcomeView = require('./views/welcomeView');
+const welcomePage = require('./views/welcomePage');
 
 document.addEventListener('DOMContentLoaded', () => {
   const main = document.querySelector('main');
-  welcomeView(main);
+  welcomePage(main);
 });

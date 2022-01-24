@@ -38,8 +38,4 @@ describe('Playing a game round', () => {
     expect(runningScore.player).toEqual(playerScore);
     expect(runningScore.computer).toBeGreaterThan(computerScore);
   });
-  test.skip('should be able to display showdown page', () => {
-    // require showdownPage()
-    expect(document.querySelector('.round-result')).toBeTruthy();
-  });
 });

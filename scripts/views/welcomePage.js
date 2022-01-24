@@ -8,6 +8,9 @@ const welcomePage = (mainElm) => {
     <p class="game-sub-title">The game</p>
     <button id="start-button">Start game</button>
   `;
+  
+  // const startButton = document.getElementById('start-button');
+  // startButton.addEventListener('click',  /*playRound()*/)
 };
 
 module.exports = welcomePage;

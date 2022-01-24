@@ -15,6 +15,10 @@ const roundPickPage = () => {
   <button id="paper-button">Paper</button>
   <button id="scissors-button">Scissors</button>
   `;
+
+  const rockButton = document.getElementById('rock-button');
+  const paperButton = document.getElementById('paper-button');
+  const scissorsButton = document.getElementById('scissors-button');
 };
 
 export default roundPickPage;

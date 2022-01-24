@@ -1,9 +1,7 @@
 const whoIsWeakAgainst = require('../data/whoIsWeakAgainst');
 const runningScore = require('../data/runningScore');
-const generateComputerCard = require('generateComputerCard');
 
-const playRound = (playerSelection) => {
-  const computerSelection = generateComputerCard()
+const playRound = (playerSelection, computerSelection) => {
   // send result to game score updater
   let resultMessage = 'Draw!';
   if (whoIsWeakAgainst(playerSelection) === computerSelection) {

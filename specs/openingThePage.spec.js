@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-const welcomePage = require('../scripts/views/welcomePage.js');
+import welcomePage from '../scripts/views/welcomePage.js';
 // create a function that generate welcome page in main tag
 describe('Opening the game page', () => {
   beforeEach(() => {
@@ -26,7 +26,7 @@ describe('Opening the game page', () => {
 
   test('browser should display round pick page when start button clicked', () => {
     welcomePage();
-    expect(document.querySelector('')).toBeDefined();
+    expect(document.querySelector('.game-title')).toBeTruthy();
   });
 
   test.skip('should not display welcome page when a round started (gameStart) called', () => {

@@ -1,17 +1,25 @@
 const whoIsWeakAgainst = require('../data/whoIsWeakAgainst');
+const runningScore = require('../data/runningScore');
+const generateComputerCard = require('generateComputerCard');
 
-const playRound = (playerSelection, computerSelection) => {
-  // return a string that declares the winner of the round
-  console.log(`You pick ${playerSelection} and the computer pick ${computerSelection}`)
-  if (playerSelection === computerSelection) {
-    return "Draw!";
-  }
-  // TODO: send result to game score updater
+const playRound = (playerSelection) => {
+  const computerSelection = generateComputerCard()
+  // send result to game score updater
+  let resultMessage = 'Draw!';
   if (whoIsWeakAgainst(playerSelection) === computerSelection) {
-    return `You win! ${playerSelection} beats ${computerSelection}`;
-  } else {
-    return `You lose! ${computerSelection} beats ${playerSelection}`;
+    resultMessage = `You win! ${playerSelection} beats ${computerSelection}`;
+    runningScore.player += 1;
   }
+  if (whoIsWeakAgainst(computerSelection) === playerSelection) {
+    resultMessage = `You lose! ${computerSelection} beats ${playerSelection}`;
+    runningScore.computer += 1;
+  }
+
+  // showdownPage({
+  //   resultMessage,
+  //   playerSelection,
+  //   computerSelection,
+  // }) this function show continue button continue button contains scoreChecking function which wether return the player to round pick or game result
 };
 
 module.exports = playRound;

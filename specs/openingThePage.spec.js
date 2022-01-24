@@ -24,8 +24,9 @@ describe('Opening the game page', () => {
     expect(document.getElementById('start-button')).toBeTruthy(); // null is defined
   });
 
-  test.skip('browser should display round pick page when start button clicked', () => {
-    expect(/* some elements in gameStart */).toBeDefined();
+  test('browser should display round pick page when start button clicked', () => {
+    welcomePage();
+    expect(document.querySelector('')).toBeDefined();
   });
 
   test.skip('should not display welcome page when a round started (gameStart) called', () => {

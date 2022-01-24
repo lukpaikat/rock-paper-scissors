@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-const welcomePage = require('../scripts/views/welcomePage');
+const welcomePage = require('../scripts/views/welcomePage.js');
 // create a function that generate welcome page in main tag
 describe('Opening the game page', () => {
   beforeEach(() => {

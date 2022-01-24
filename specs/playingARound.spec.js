@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-const playRound = require('../scripts/utils/playRound');
-const runningScore = require('../scripts/data/runningScore');
+const playRound = require('../scripts/utils/playRound.js').default;
+const runningScore = require('../scripts/data/runningScore.js');
 
 describe('Playing a game round', () => {
   let playerScore;

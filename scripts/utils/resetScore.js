@@ -1,4 +1,4 @@
-const runningScore = require('../data/runningScore');
+import runningScore from '../data/runningScore.js';
 
 const resetScore = () => {
   runningScore.round = 1;
@@ -6,4 +6,4 @@ const resetScore = () => {
   runningScore.computer = 0;
 };
 
-module.exports = resetScore;
+export default resetScore;

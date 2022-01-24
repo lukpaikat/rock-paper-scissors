@@ -1,4 +1,4 @@
-const { round, player, computer } = require('../data/runningScore');
+const { round, player, computer } = require('../data/runningScore.js');
 
 const roundPickPage = () => {
   const main = document.querySelector('main');
@@ -13,7 +13,7 @@ const roundPickPage = () => {
   <button id="rock-button">Rock</button>
   <button id="paper-button">Paper</button>
   <button id="scissors-button">Scissors</button>
-  `
-}
+  `;
+};
 
-module.exports = roundPickPage
+module.exports = roundPickPage;

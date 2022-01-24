@@ -1,4 +1,4 @@
-const generateComputerCard = require('../scripts/utils/generateComputerCard');
+const generateComputerCard = require('../scripts/utils/generateComputerCard.js').default;
 
 describe('generateComputerCard should return rock, paper, or scissors for a number of times', () => {
   for (let i = 1; i <= 5; i += 1) {

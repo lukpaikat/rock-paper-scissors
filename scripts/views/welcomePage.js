@@ -1,5 +1,5 @@
-import resetScore from '../utils/resetScore';
-import roundPickPage from './roundPickPage';
+import resetScore from '../utils/resetScore.js';
+import roundPickPage from './roundPickPage.js';
 
 // const resetScore = require('../utils/resetScore');
 // const roundPickPage = require('./roundPickPage');

@@ -1,7 +1,6 @@
 // execute initial functions here
-import welcomePage from './views/welcomePage';
+import welcomePage from './views/welcomePage.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const main = document.querySelector('main');
-  welcomePage(main);
+  welcomePage();
 });

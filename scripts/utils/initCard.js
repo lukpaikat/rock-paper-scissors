@@ -1,16 +1,16 @@
 // initiate game showdown
 // maybe should be called cards initiator
 
-const generateComputerCard = require('./utils/generateComputerCard.js');
-const playRound = require('../utils/playRound');
+import generateComputerCard from './generateComputerCard.js';
+import playRound from './playRound.js';
 // what the code should do
-// TODO: click btn to pick the game choice
+// click btn to pick the game choice
 const initCard = (btnElement, btnStrInput) => {
   // give event listeners to the game buttons
   const roundResultElement = document.getElementById('round-result');
   btnElement.addEventListener('click', () => {
     roundResultElement.textContent = playRound(btnStrInput, generateComputerCard());
   });
-}
+};
 
-module.exports = initCard;
+export default initCard;

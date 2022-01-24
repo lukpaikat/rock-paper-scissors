@@ -1,4 +1,4 @@
-const randomGenerator = require('./randomGenerator.js');
+import randomGenerator from './randomGenerator.js';
 
 const generateComputerCard = () => {
   const randomNumber = randomGenerator(0, 2);
@@ -6,4 +6,4 @@ const generateComputerCard = () => {
   return computerChoices[randomNumber];
 };
 
-module.exports = generateComputerCard;
+export default generateComputerCard;

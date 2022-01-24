@@ -1,5 +1,6 @@
-const whoIsWeakAgainst = require('../data/whoIsWeakAgainst');
-const runningScore = require('../data/runningScore');
+import whoIsWeakAgainst from '../data/whoIsWeakAgainst.js';
+import runningScore from '../data/runningScore.js';
+// const runningScore = require('../data/runningScore');
 
 const playRound = (playerSelection, computerSelection) => {
   // send result to game score updater
@@ -20,4 +21,4 @@ const playRound = (playerSelection, computerSelection) => {
   // }) this function show continue button continue button contains scoreChecking function which wether return the player to round pick or game result
 };
 
-module.exports = playRound;
+export default playRound;

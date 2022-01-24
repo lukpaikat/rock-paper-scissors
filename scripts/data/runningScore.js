@@ -4,4 +4,4 @@ const runningScore = {
   computer: 0,
 };
 
-module.exports = runningScore;
+export default runningScore;

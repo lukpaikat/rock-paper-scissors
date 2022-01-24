@@ -1,3 +1,6 @@
+// initiate game showdown
+// maybe should be called cards initiator
+
 const computerPlay = require('./utils/computerPlay.js');
 const playRound = require('../utils/playRound');
 // what the code should do

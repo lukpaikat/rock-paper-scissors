@@ -1,5 +1,3 @@
-// const initButton = require('./utils/btn-initiator');
-
 // this code should make browser display welcome page
 const welcomePage = (mainElm) => {
   const main = mainElm;
@@ -10,7 +8,7 @@ const welcomePage = (mainElm) => {
   `;
   
   // const startButton = document.getElementById('start-button');
-  // startButton.addEventListener('click',  /*playRound()*/)
+  // startButton.addEventListener('click',  /*roundPick()*/)
 };
 
 module.exports = welcomePage;

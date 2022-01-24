@@ -1,9 +1,9 @@
 const randomGenerator = require('./randomGenerator.js');
 
-const computerPlay = () => {
+const generateComputerCard = () => {
   const randomNumber = randomGenerator(0, 2);
   const computerChoices = ['rock', 'paper', 'scissors'];
   return computerChoices[randomNumber];
 };
 
-module.exports = computerPlay;
+module.exports = generateComputerCard;

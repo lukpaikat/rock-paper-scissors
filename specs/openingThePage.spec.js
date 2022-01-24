@@ -29,10 +29,10 @@ describe('Opening the game page', () => {
   });
 
   test('should be able to start game when start button clicked', () => {
-    expect(/* some elements in gameround */).toBeDefined();
+    expect(/* some elements in gameStart */).toBeDefined();
   });
 
-  test('should not display welcome page when a round started (playRound) called', () => {
+  test('should not display welcome page when a round started (gameStart) called', () => {
     const main = document.querySelector('main');
     welcomePage(main);
     const startButton = document.getElementById('start-button');

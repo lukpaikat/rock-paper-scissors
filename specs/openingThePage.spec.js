@@ -29,7 +29,7 @@ describe('Opening the game page', () => {
     expect(document.querySelector('.game-title')).toBeTruthy();
   });
 
-  test.skip('should not display welcome page when a round started (gameStart) called', () => {
+  test('should not display welcome page when a round started', () => {
     welcomePage();
     const startButton = document.getElementById('start-button');
     startButton.click();

@@ -8,7 +8,7 @@ const welcomePage = (mainElm) => {
   `;
   
   // const startButton = document.getElementById('start-button');
-  // startButton.addEventListener('click',  /*roundPick()*/)
+  // startButton.addEventListener('click', resetScore()  roundPick())
 };
 
 module.exports = welcomePage;

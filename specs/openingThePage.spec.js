@@ -1,13 +1,13 @@
 /**
  * @jest-environment jsdom
  */
-const welcomePage = require('../scripts/views/welcomePage')
+const welcomePage = require('../scripts/views/welcomePage');
 // create a function that generate welcome page in main tag
 describe('Opening the game page', () => {
   beforeEach(() => {
     document.body.innerHTML = /* html */ `
     <main></main>
-  `
+  `;
   });
 
   afterEach(() => {
@@ -16,7 +16,7 @@ describe('Opening the game page', () => {
 
   test('Should display the game title', () => {
     welcomePage();
-    expect(document.querySelector('.game-title').textContent).toEqual('Rock Paper Scissors')
+    expect(document.querySelector('.game-title').textContent).toEqual('Rock Paper Scissors');
   });
 
   test('Should display start button', () => {

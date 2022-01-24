@@ -1,3 +1,5 @@
+import resetScore from '../utils/resetScore';
+import roundPickPage from './roundPickPage';
 
 // const resetScore = require('../utils/resetScore');
 // const roundPickPage = require('./roundPickPage');
@@ -10,7 +12,7 @@ const welcomePage = () => {
     <p class="game-sub-title">The game</p>
     <button id="start-button">Start game</button>
   `;
-  
+
   const startButton = document.getElementById('start-button');
   startButton.addEventListener('click', () => {
     resetScore();
@@ -18,4 +20,4 @@ const welcomePage = () => {
   });
 };
 
-module.exports = welcomePage;
+export default welcomePage;

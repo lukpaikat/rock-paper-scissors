@@ -22,7 +22,7 @@ describe('Playing a game round', () => {
   test('Should not update score if player\'s choice equal to computer\'s', () => {
     playRound('rock', 'rock');
     expect(runningScore.computer).toEqual(computerScore);
-    expect(runningScore.player).toEqual(playerScore)
+    expect(runningScore.player).toEqual(playerScore);
   });
   test('Should update the player score if the player won', () => {
     playRound('scissors', 'paper');

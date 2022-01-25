@@ -1,17 +1,17 @@
 import whoIsWeakAgainst from '../data/whoIsWeakAgainst.js';
 import runningScore from '../data/runningScore.js';
-// const runningScore = require('../data/runningScore');
+import ShowdownPage from '../views/showdownPage.js';
 
-const playRound = (playerSelection, computerSelection) => {
+const playRound = (playerCard, computerCard) => {
   runningScore.round += 1;
   // send result to game score updater
   let resultMessage = 'Draw!';
-  if (whoIsWeakAgainst(playerSelection) === computerSelection) {
-    resultMessage = `You win! ${playerSelection} beats ${computerSelection}`;
+  if (whoIsWeakAgainst(playerCard) === computerCard) {
+    resultMessage = `You win! ${playerCard} beats ${computerCard}`;
     runningScore.player += 1;
   }
-  if (whoIsWeakAgainst(computerSelection) === playerSelection) {
-    resultMessage = `You lose! ${computerSelection} beats ${playerSelection}`;
+  if (whoIsWeakAgainst(computerCard) === playerCard) {
+    resultMessage = `You lose! ${computerCard} beats ${playerCard}`;
     runningScore.computer += 1;
   }
 
@@ -20,15 +20,12 @@ const playRound = (playerSelection, computerSelection) => {
   player: ${runningScore.player}
   computer: ${runningScore.computer}
   `);
-  // TODO: showdownPage
-  // showdownPage({
-  //   resultMessage,
-  //   playerSelection,
-  //   computerSelection,
-  // })
-  // this function show continue button
-  // continue button contains scoreChecking function
-  // which wether return the player to round pick or game result
+
+  ShowdownPage.render({
+    resultMessage,
+    playerCard,
+    computerCard,
+  });
 };
 
 export default playRound;

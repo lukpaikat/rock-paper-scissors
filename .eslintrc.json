@@ -17,7 +17,8 @@
         "jest/no-identical-title": "error",
         "jest/prefer-to-have-length": "warn",
         "jest/valid-expect": "error",
-        "import/extensions": ["error", "always"]
+        "import/extensions": ["error", "always"],
+        "no-underscore-dangle": "off"
     },
     "plugins": ["jest"]
 }

@@ -3,6 +3,7 @@ import runningScore from '../data/runningScore.js';
 // const runningScore = require('../data/runningScore');
 
 const playRound = (playerSelection, computerSelection) => {
+  runningScore.round += 1;
   // send result to game score updater
   let resultMessage = 'Draw!';
   if (whoIsWeakAgainst(playerSelection) === computerSelection) {
@@ -14,11 +15,20 @@ const playRound = (playerSelection, computerSelection) => {
     runningScore.computer += 1;
   }
 
+  console.log(` ${resultMessage}
+  Round: ${runningScore.round}
+  player: ${runningScore.player}
+  computer: ${runningScore.computer}
+  `);
+  // TODO: showdownPage
   // showdownPage({
   //   resultMessage,
   //   playerSelection,
   //   computerSelection,
-  // }) this function show continue button continue button contains scoreChecking function which wether return the player to round pick or game result
+  // })
+  // this function show continue button
+  // continue button contains scoreChecking function
+  // which wether return the player to round pick or game result
 };
 
 export default playRound;

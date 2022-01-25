@@ -16,7 +16,7 @@ const welcomePage = () => {
   const startButton = document.getElementById('start-button');
   startButton.addEventListener('click', () => {
     resetScore();
-    roundPickPage();
+    roundPickPage.render();
   });
 };
 

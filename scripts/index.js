@@ -2,5 +2,5 @@
 import welcomePage from './views/welcomePage.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  welcomePage();
+  welcomePage.render();
 });

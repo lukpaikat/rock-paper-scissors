@@ -1,4 +1,4 @@
-import RoundPickPage from './roundPickPage.js';
+import checkScore from '../utils/checkScore.js';
 
 const ShowdownPage = {
   render({
@@ -25,7 +25,7 @@ const ShowdownPage = {
   afterRender() {
     const continueButton = document.getElementById('continue-button');
     continueButton.addEventListener('click', () => {
-      RoundPickPage.render(); // sementara
+      checkScore();
       // this function show continue button
       // continue button contains scoreChecking function
       // which wether return the player to round pick or game result

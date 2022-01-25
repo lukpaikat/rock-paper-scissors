@@ -2,7 +2,7 @@ import runningScore from '../data/runningScore.js';
 import playRound from '../utils/playRound.js';
 import generateComputerCard from '../utils/generateComputerCard.js';
 
-const roundPickPage = {
+const RoundPickPage = {
   render() {
     const { round, player, computer } = runningScore;
     const main = document.querySelector('main');
@@ -38,4 +38,4 @@ const roundPickPage = {
   },
 };
 
-export default roundPickPage;
+export default RoundPickPage;

@@ -1,8 +1,5 @@
 import resetScore from '../utils/resetScore.js';
-import roundPickPage from './roundPickPage.js';
-
-// const resetScore = require('../utils/resetScore');
-// const roundPickPage = require('./roundPickPage');
+import RoundPickPage from './roundPickPage.js';
 
 // this code should make browser display welcome page
 const welcomePage = () => {
@@ -16,7 +13,7 @@ const welcomePage = () => {
   const startButton = document.getElementById('start-button');
   startButton.addEventListener('click', () => {
     resetScore();
-    roundPickPage.render();
+    RoundPickPage.render();
   });
 };
 

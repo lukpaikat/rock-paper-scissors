@@ -1,4 +1,5 @@
 import checkScore from '../utils/checkScore.js';
+import roundPickPageDisplay from '../utils/roundPickPageDisplay.js';
 
 const ShowdownPage = {
   render({
@@ -7,6 +8,7 @@ const ShowdownPage = {
     computerCard,
   }) {
     const overlay = document.querySelector('.overlay');
+    roundPickPageDisplay('none');
     overlay.innerHTML = /* html */ `
       <div class='card-container'>
         <img class="card" src="./assets/hand-images/${computerCard}-hand.svg">
@@ -25,6 +27,7 @@ const ShowdownPage = {
   afterRender() {
     const continueButton = document.getElementById('continue-button');
     continueButton.addEventListener('click', () => {
+      roundPickPageDisplay('block');
       checkScore();
       // this function show continue button
       // continue button contains scoreChecking function

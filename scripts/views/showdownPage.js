@@ -6,18 +6,18 @@ const ShowdownPage = {
     playerCard,
     computerCard,
   }) {
-    const main = document.querySelector('main');
-    main.innerHTML = /* html */ `
-    <div class='card-container'>
-      <img class="card" src="./assets/hand-images/${computerCard}-hand.svg">
-    </div>
-    <div>
-      <p>${resultMessage}</p>
-    </div>
-    <div>
-      <img class="card" src="./assets/hand-images/${playerCard}-hand.svg">
-    </div>
-    <button id="continue-button">continue</button>
+    const overlay = document.querySelector('.overlay');
+    overlay.innerHTML = /* html */ `
+      <div class='card-container'>
+        <img class="card" src="./assets/hand-images/${computerCard}-hand.svg">
+      </div>
+      <div>
+        <p>${resultMessage}</p>
+      </div>
+      <div>
+        <img class="card" src="./assets/hand-images/${playerCard}-hand.svg">
+      </div>
+      <button id="continue-button">continue</button>
     `;
     this.afterRender();
   },

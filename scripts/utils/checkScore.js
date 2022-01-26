@@ -1,5 +1,5 @@
 import runningScore from '../data/runningScore.js';
-import RoundPickPage from '../views/roundPickPage.js';
+import updateScore from './updateScore.js';
 
 const checkScore = () => {
   const { player, computer } = runningScore;
@@ -12,7 +12,9 @@ const checkScore = () => {
     window.location.reload();
   }
   if (computer < 5 && player < 5) {
-    RoundPickPage.render();
+    const overlay = document.querySelector('.overlay');
+    updateScore();
+    overlay.innerHTML = '';
   }
 };
 

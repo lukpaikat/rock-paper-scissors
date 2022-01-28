@@ -1,0 +1,33 @@
+@import url('./buttons.css');
+@import url('./animations.css');
+:root {
+  /*fonts*/
+  --Poppins: 'Poppins', sans-serif; 
+}
+body {
+  background-color: #303030;
+  font-family: var(--Poppins);
+}
+
+h1, h2 {
+  color: #A6FF70;
+}
+
+p {
+  color: #FFF;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title-container {
+  margin: 0 auto;
+}
+
+.title-container h1 {
+  margin-bottom: 0.1em;
+}

@@ -1,0 +1,20 @@
+.buttons {
+  font-family: var(--Poppins);
+  margin: 5em auto 0 auto;
+  border: none;
+  border-radius: 2px;
+  width: fit-content;
+  padding: 15px;
+  background-color: #A6FF70;
+  transition: 200ms;
+}
+
+.buttons:hover {
+  transform: translateY(-10%);
+  box-shadow: 0px 0px 5px 0px #A6FF70;
+}
+
+.buttons:active {
+  transform: translateY(0) scale(1.2, 1);
+  box-shadow: #A6FF70 0px 0px 10px 0px;
+}

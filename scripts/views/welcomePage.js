@@ -6,9 +6,13 @@ const WelcomePage = {
   render() {
     const main = document.querySelector('main');
     main.innerHTML = /* html */ `
-    <h1 class="game-title">Rock Paper Scissors</h1>
-    <p class="game-sub-title">The game</p>
-    <button id="start-button">Start game</button>
+    <div class="flex-container">
+      <div class="title-container">
+        <h1 class="game-title animate-pop-in">Rock Paper Scissors</h1>
+        <p class="game-sub-title animate-pop-in">The game</p>
+      </div>
+      <button class="buttons animate-pop-in" id="start-button">Start game</button>
+    </div>
   `;
     this.afterRender();
   },

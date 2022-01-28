@@ -11,13 +11,13 @@ const ShowdownPage = {
     roundPickPageDisplay('none');
     overlay.innerHTML = /* html */ `
       <div class='card-container'>
-        <img class="card" src="./assets/hand-images/${computerCard}-hand.svg">
+        <img class="card" src="./assets/hand-cards/${computerCard}-card.svg">
       </div>
       <div>
         <p>${resultMessage}</p>
       </div>
       <div>
-        <img class="card" src="./assets/hand-images/${playerCard}-hand.svg">
+        <img class="card" src="./assets/hand-cards/${playerCard}-card.svg">
       </div>
       <button id="continue-button">continue</button>
     `;

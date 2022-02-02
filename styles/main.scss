@@ -1,0 +1,36 @@
+@import './components/_buttons.scss';
+@import './components/_animations.scss';
+@import './components/_texts.scss';
+:root {
+  /*fonts*/
+  --Poppins: 'Poppins', sans-serif; 
+}
+body {
+  background-color: #303030;
+  font-family: var(--Poppins);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.round-heading {
+  text-align: center;
+}
+
+.round-info {
+  text-align: center;
+}
+
+.running-score-container {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+}
+
+.running-score-container p {
+  display: block;
+}

@@ -18,3 +18,22 @@
   transform: translateY(0) scale(1.2, 1);
   box-shadow: #A6FF70 0px 0px 10px 0px;
 }
+
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__button {
+    display: block;
+    background: none;
+    border: none;
+    margin: 0 auto;
+  }
+
+  &__description {
+    padding: 0 2em;
+    font-size: .75rem;
+    font-weight: 300;
+  }
+}

@@ -7,9 +7,9 @@ const WelcomePage = {
     const main = document.querySelector('main');
     main.innerHTML = /* html */ `
     <div class="flex-container">
-      <div class="title-container">
-        <h1 class="game-title animate-pop-in">Rock Paper Scissors</h1>
-        <p class="game-sub-title animate-pop-in">The game</p>
+      <div class="game-title">
+        <h1 class="game-title__main-title animate-pop-in">Rock Paper Scissors</h1>
+        <p class="game-title__sub-title animate-pop-in">The game</p>
       </div>
       <button class="buttons animate-pop-in" id="start-button">Start game</button>
     </div>

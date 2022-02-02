@@ -1,0 +1,19 @@
+
+h1, h2 {
+  color: #A6FF70;
+}
+
+p {
+  color: #FFF;
+}
+
+.game-title {
+  margin: 0 auto;
+  &__main-title {
+    text-align: center;
+    margin-bottom: 0.1em;
+  }
+  &__sub-title {
+    text-align: center;
+  }
+}

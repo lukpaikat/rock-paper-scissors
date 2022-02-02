@@ -1,12 +1,84 @@
-@import url('./buttons.css');
-@import url('./animations.css');
-:root {
-  /*fonts*/
-  --Poppins: 'Poppins', sans-serif; 
-}
-body {
-  background-color: #303030;
+.buttons {
   font-family: var(--Poppins);
+  margin: 5em auto 0 auto;
+  border: none;
+  border-radius: 2px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px;
+  background-color: #A6FF70;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.buttons:hover {
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+  -webkit-box-shadow: 0px 0px 5px 0px #A6FF70;
+          box-shadow: 0px 0px 5px 0px #A6FF70;
+}
+
+.buttons:active {
+  -webkit-transform: translateY(0) scale(1.2, 1);
+          transform: translateY(0) scale(1.2, 1);
+  -webkit-box-shadow: #A6FF70 0px 0px 10px 0px;
+          box-shadow: #A6FF70 0px 0px 10px 0px;
+}
+
+.card-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-buttons__button {
+  display: block;
+  background: none;
+  border: none;
+  margin: 0 auto;
+}
+
+.card-buttons__description {
+  padding: 0 2em;
+  font-size: .75rem;
+  font-weight: 300;
+}
+
+@-webkit-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-4rem) scale(0.8);
+            transform: translateY(-4rem) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-4rem) scale(0.8);
+            transform: translateY(-4rem) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.animate-pop-in {
+  -webkit-animation: pop-in .6s ease-out;
+          animation: pop-in .6s ease-out;
 }
 
 h1, h2 {
@@ -17,17 +89,62 @@ p {
   color: #FFF;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-}
-
-.title-container {
+.game-title {
   margin: 0 auto;
 }
 
-.title-container h1 {
+.game-title__main-title {
+  text-align: center;
   margin-bottom: 0.1em;
 }
+
+.game-title__sub-title {
+  text-align: center;
+}
+
+:root {
+  /*fonts*/
+  --Poppins: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #303030;
+  font-family: var(--Poppins);
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.round-heading {
+  text-align: center;
+}
+
+.round-info {
+  text-align: center;
+}
+
+.running-score-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3em;
+}
+
+.running-score-container p {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */

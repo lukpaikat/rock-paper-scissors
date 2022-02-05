@@ -146,6 +146,10 @@ p {
           order: 1;
 }
 
+.final-result h2, .final-result p {
+  text-align: center;
+}
+
 :root {
   /*fonts*/
   --Poppins: 'Poppins', sans-serif;

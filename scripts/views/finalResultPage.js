@@ -11,13 +11,15 @@ const FinalResultPage = {
     roundPickPageDisplay('none');
     const overlay = document.querySelector('.overlay');
     overlay.innerHTML = /* html */ `
-      <div class="overlay-inner">
+    <div class="flex-container">
+      <div class="final-result">
         <h2>Game Over</h2>
         <p>${message}</p>
         <p>Player: ${playerScore}</p>
         <p>Computer: ${computerScore}</p>
-        <button id="retry-button">retry game</button>
+        <button class="buttons" id="retry-button">retry game</button>
       </div>
+    </div>
     `;
     this.afterRender();
   },

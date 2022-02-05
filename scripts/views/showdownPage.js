@@ -10,16 +10,20 @@ const ShowdownPage = {
     const overlay = document.querySelector('.overlay');
     roundPickPageDisplay('none');
     overlay.innerHTML = /* html */ `
-      <div class='card-container'>
+    <div class="showdown-container">
+      <div class="card-container">
+        <p class="computer-tag">Computer</p>
         <img class="card" src="./assets/hand-cards/${computerCard}-card.svg">
       </div>
-      <div>
-        <p>${resultMessage}</p>
+      <div class="message-container">
+        <p class="round-result-message">${resultMessage}</p>
+        <button class="buttons" id="continue-button">continue</button>
       </div>
-      <div>
+      <div class="card-container">
+        <p class="player-tag">Player</p>
         <img class="card" src="./assets/hand-cards/${playerCard}-card.svg">
       </div>
-      <button id="continue-button">continue</button>
+    </div>
     `;
     this.afterRender();
   },

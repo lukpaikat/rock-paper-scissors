@@ -3,3 +3,33 @@
   align-items: center;
   flex-direction: column;
 }
+
+.message-container {
+  margin: 1em;
+}
+
+.round-result-message {
+  text-align: center;
+}
+
+.card-container {
+  padding: 0 2em;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+
+// .computer-tag {
+//   margin-top: 0;
+//   order: 2;
+//   position: absolute;
+//   right: -5em;
+//   top: 1%;
+//   transform-origin: left top;
+//   transform: rotate(90deg);
+// }
+
+.player-tag {
+  order: 1;
+}

@@ -1,6 +1,7 @@
 .showdown-container {
   display: flex;
   height: 100vh;
+  min-height: 560px;
   align-items: center;
   flex-direction: column;
 }

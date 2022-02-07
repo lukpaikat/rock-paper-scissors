@@ -144,6 +144,7 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100vh;
+  min-height: 560px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -182,6 +183,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
+  min-height: 560px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -250,7 +252,7 @@ body {
   font-family: var(--Poppins);
 }
 
-.flex-container {
+.game-title-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,5 +264,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
+  min-height: 320px;
 }
 /*# sourceMappingURL=main.css.map */

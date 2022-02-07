@@ -13,9 +13,10 @@ body {
   font-family: var(--Poppins);
 }
 
-.flex-container {
+.game-title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  min-height: 320px;
 }

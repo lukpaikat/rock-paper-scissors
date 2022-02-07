@@ -1,8 +1,9 @@
-@import './components/_buttons.scss';
-@import './components/_animations.scss';
-@import './components/_texts.scss';
-@import './components/_showdown.scss';
-@import './components/_finalResult.scss';
+@import './components/buttons';
+@import './components/animations';
+@import './components/texts';
+@import './layout/finalResult';
+@import './layout/roundPick';
+@import './layout/showdown';
 :root {
   /*fonts*/
   --Poppins: 'Poppins', sans-serif; 
@@ -17,22 +18,4 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-}
-
-.round-heading {
-  text-align: center;
-}
-
-.round-info {
-  text-align: center;
-}
-
-.running-score-container {
-  display: flex;
-  justify-content: center;
-  gap: 3em;
-}
-
-.running-score-container p {
-  display: block;
 }

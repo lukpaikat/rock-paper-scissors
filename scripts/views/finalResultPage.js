@@ -27,7 +27,7 @@ const FinalResultPage = {
   afterRender() {
     const retryButton = document.getElementById('retry-button');
     retryButton.onclick = () => {
-      roundPickPageDisplay('block');
+      roundPickPageDisplay('flex');
       resetScore();
       updateScore();
       document.querySelector('.overlay').innerHTML = '';

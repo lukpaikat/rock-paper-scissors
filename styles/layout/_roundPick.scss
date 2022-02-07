@@ -1,0 +1,29 @@
+.round-pick {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.round-heading {
+  text-align: center;
+}
+
+.round-info {
+  margin: 1em auto;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+}
+
+.running-score-container {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+}
+
+.running-score-container p {
+  display: block;
+  margin-top: 0;
+}

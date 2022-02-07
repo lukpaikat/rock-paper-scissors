@@ -13,8 +13,10 @@ const RoundPickPage = {
           <p>Player: <span id="player-score">${player}</span></p>
           <p>Computer: <span id="computer-score">${computer}</span></p>
         </div>
-        <p class="round-info">First to 5 win</p>
-        <p class="round-info">Pick a card to play</p>
+        <div class="round-info">
+          <p>First to 5 win</p>
+          <p>Pick a card to play</p>
+        </div>
         <div class="card-buttons">
           <div>
             <button class="card-buttons__button" id="rock-button"><img src="./assets/hand-cards/rock-card.svg"></button>

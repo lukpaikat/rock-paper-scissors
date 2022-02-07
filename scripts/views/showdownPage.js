@@ -31,7 +31,7 @@ const ShowdownPage = {
   afterRender() {
     const continueButton = document.getElementById('continue-button');
     continueButton.addEventListener('click', () => {
-      roundPickPageDisplay('block');
+      roundPickPageDisplay('flex');
       checkScore();
       // this function show continue button
       // continue button contains scoreChecking function

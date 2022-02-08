@@ -10,5 +10,5 @@
 }
 
 .animate-pop-in {
-  animation: pop-in .6s ease-out; 
+  animation: pop-in .6s cubic-bezier(.17,.67,.44,1.28);
 }

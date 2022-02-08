@@ -7,7 +7,7 @@ const RoundPickPage = {
     const { round, player, computer } = runningScore;
     const main = document.querySelector('main');
     main.innerHTML = /* html */ `
-      <div class="round-pick">
+      <div class="round-pick animate-fade-in">
         <h2 class="round-heading">Round: <span id=round-count>${round}</span></h2>
         <div class="running-score-container">
           <p>Player: <span id="player-score">${player}</span></p>

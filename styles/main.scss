@@ -1,9 +1,12 @@
 @import './components/buttons';
-@import './components/animations';
 @import './components/texts';
-@import './layout/finalResult';
-@import './layout/roundPick';
-@import './layout/showdown';
+@import './pages/finalResult';
+@import './pages/roundPick';
+@import './pages/showdown';
+@import './animations/pop-in';
+@import './animations/fade-in';
+@import './animations/move-in';
+
 :root {
   /*fonts*/
   --Poppins: 'Poppins', sans-serif; 

@@ -10,7 +10,7 @@ const ShowdownPage = {
     const overlay = document.querySelector('.overlay');
     roundPickPageDisplay('none');
     overlay.innerHTML = /* html */ `
-    <div class="showdown-container">
+    <div class="showdown-container animate-fade-in">
       <div class="card-container">
         <p class="computer-tag">Computer</p>
         <img class="card" src="./assets/hand-cards/${computerCard}-card.svg">

@@ -1,0 +1,13 @@
+@keyframes move-in {
+  0% {
+    transform: translateX(200%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-move-in {
+  animation: move-in 200ms ease-in;
+}

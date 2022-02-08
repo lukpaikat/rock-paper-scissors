@@ -11,7 +11,7 @@ const FinalResultPage = {
     roundPickPageDisplay('none');
     const overlay = document.querySelector('.overlay');
     overlay.innerHTML = /* html */ `
-    <div class="flex-container">
+    <div class="flex-container animate-fade-in">
       <div class="final-result">
         <h2>Game Over</h2>
         <p>${message}</p>
